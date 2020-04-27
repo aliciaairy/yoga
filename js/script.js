@@ -65,8 +65,8 @@ window.addEventListener('DOMContentLoaded', function () {
 
     function updateClock() {
       let t = getTimeRemaining(endtime);
-      hoursElem.textContent = String(t.hours).length == 2 ? t.hours : '0' + t.hours;
-      minutesElem.textContent = String(t.minutes).length == 2 ? t.minutes : '0' + t.hours;
+      hoursElem.textContent = String(t.hours).length >= 2 ? t.hours : '0' + t.hours;
+      minutesElem.textContent = String(t.minutes).length == 2 ? t.minutes : '0' + t.minutes;
       secondsElem.textContent = String(t.seconds).length == 2 ? t.seconds : '0' + t.seconds;
 
       if (t.total < 0) {
